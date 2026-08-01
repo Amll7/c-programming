@@ -1,7 +1,8 @@
 #include<stdio.h>
 int main()
 {
-    int n,sum=0,rem,temp,cube;
+    int rem,temp;
+    int n,sum=0,cube;
     printf("enter a 3 digit number:");
     scanf("%d",&n);
     temp=n;

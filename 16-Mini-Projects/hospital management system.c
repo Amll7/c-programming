@@ -6,7 +6,7 @@ long long int phonenumber;
 char doctors,test;
 int consultfee1=500,consultfee2=1000,consultfee3=700,consultfee4=1200;
 int labfee1=50,labfee2=100,labfee3=200,labfee4=120;
-int consultationFee,labtestfee,pharmbill;
+int consultationFee = 0,labtestfee = 0,pharmbill = 0;
 float sub_Total,gst;
 
 do 
@@ -50,7 +50,7 @@ switch(choice)
 
     case 3:
         printf("Doctor Consultation\n");
-        printf("a.General Physician\nb.Cardiologist\nc.Orthopediac\nd.Neurologist\n");
+        printf("a.General Physician\nb.Cardiologist\nc.Orthopedic\nd.Neurologist\n");
         printf("Select the doctor you want to consult:");
         scanf(" %c",&doctors);
         switch(doctors)
@@ -62,17 +62,17 @@ switch(choice)
           break;
         case 'b':
           printf("Consultation booked for Cardiologist\n");
-          printf("Consulation fees is %d\n",consultfee2);
+          printf("Consultation fees is %d\n",consultfee2);
           consultationFee = consultfee2;
           break;
         case 'c':
-          printf("Consultation booked for orthopediac\n");
-          printf("Consulation fees is %d\n",consultfee3);
+          printf("Consultation booked for orthopedic\n");
+          printf("Consultation fees is %d\n",consultfee3);
           consultationFee = consultfee3;
           break;
         case 'd':
           printf("Consultation booked for neurologist\n");
-          printf("Consulation fees is %d\n",consultfee4);
+          printf("Consultation fees is %d\n",consultfee4);
           consultationFee = consultfee4;
           break;
         default :
@@ -112,12 +112,13 @@ switch(choice)
         }
         break;
     case 5:
-        printf("Enter the parmacy bill amount:");
+        printf("Enter the pharmacy bill amount:");
         scanf("%d",&pharmbill);
+        prinf("Total pharmacy bill is %d",pharmbill);
         break;
     case 6:
         sub_Total = consultationFee+labtestfee+pharmbill;
-        gst = sub_Total/100;
+        gst = sub_Total*5/100;
 
         printf("===============================\n");
         printf("        HOSPITAL BILL         \n");
