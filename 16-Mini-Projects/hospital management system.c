@@ -26,7 +26,7 @@ scanf("%d",&choice);
 switch(choice)
  {
     case 1:
-        printf("===============================\n");
+        printf("\n\n\n===============================\n");
         printf("     PATIENT REGISTRATION      \n");
         printf("===============================\n");
 
@@ -38,7 +38,7 @@ switch(choice)
         scanf("%lld",&phonenumber);
 
         printf("_____________________________________________\n");
-        printf("Patient registration successful\n");
+        printf("Patient registration successful\n\n\n\n");
         break;
 
     case 2:
@@ -114,7 +114,7 @@ switch(choice)
     case 5:
         printf("Enter the pharmacy bill amount:");
         scanf("%d",&pharmbill);
-        prinf("Total pharmacy bill is %d",pharmbill);
+        printf("Total pharmacy bill is %d",pharmbill);
         break;
     case 6:
         sub_Total = consultationFee+labtestfee+pharmbill;
