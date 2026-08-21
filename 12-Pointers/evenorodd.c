@@ -5,6 +5,8 @@ int main()
     printf("Enter a number:");
     scanf("%d",&num);
    
+
+    
     //assigning adress to pointer
     int *ptr;
     ptr=&num;

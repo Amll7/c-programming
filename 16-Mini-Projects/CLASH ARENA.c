@@ -214,7 +214,7 @@ int main()
         // 1. SKELETON
         
             case 1:
-            portion++;
+            potions++;
             enemyChoice = rand() % 2;
 
             if(enemyChoice == 0)
