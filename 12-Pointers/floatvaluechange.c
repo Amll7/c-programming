@@ -1,4 +1,8 @@
 #include<stdio.h>
+void change(float *ptr)
+{
+    *ptr=*ptr+25;
+}
 int main()
 {
     float num;
@@ -6,9 +10,8 @@ int main()
     scanf("%f",&num);
     float *ptr;
     ptr=&num;
-    printf("The adress of p is %p\n",ptr);
-    printf("The value is %f\n",*ptr);
-    *ptr=*ptr+15;
+    printf("The adress of ptr is %p\n",ptr);
+    change(ptr);
     printf("The value is %f",num);
     return 0;
 }

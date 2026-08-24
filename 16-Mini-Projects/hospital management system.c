@@ -9,7 +9,7 @@ int labfee1=50,labfee2=100,labfee3=200,labfee4=120;
 int consultationFee = 0,labtestfee = 0,pharmbill = 0;
 float sub_Total,gst;
 
-do 
+while(choice != 7)
 {
 printf("===============================\n");
 printf("   HOSPITAL MANAGEMENT SYSTEM  \n");
@@ -162,7 +162,7 @@ switch(choice)
     default:
         printf("Invalid Choice\n");
  }
- } while(choice != 7);
+ } 
  return 0;
 
 }
