@@ -1,0 +1,17 @@
+#include <stdio.h>
+int main()
+{
+static int i = 5;
+if (--i)
+{
+main();
+}
+printf("i %d\n", i);
+return 0;
+}
+//HERE WHAT HAPPEN IS 
+//IN EACH STACK THE I IS DECREMENTING 
+//WHEN I BECOME 0
+//CONDITION FAILS AND EACH STACK TRIES TO PRINT
+//BUT THE I IS STATIC AND I IS CURRENTLY HAVING  VALUE 0
+//SO EVERY STACK WILL PRINT 0

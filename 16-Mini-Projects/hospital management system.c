@@ -32,7 +32,7 @@ switch(choice)
 
         printf("Enter user ID:\n");
         scanf("%d",&userid);
-        printf("Enter user age1:\n");
+        printf("Enter user age:\n");
         scanf("%d",&age);
         printf("Enter user phone number:\n");
         scanf("%lld",&phonenumber);
@@ -42,14 +42,14 @@ switch(choice)
         break;
 
     case 2:
-        printf("View Patient Details\n");
+        printf("\n\n\n\n\nView Patient Details\n");
         printf("User id: %d\n",userid);
         printf("User age: %d \n",age);
         printf("User ph: %lld \n",phonenumber);
         break;
 
     case 3:
-        printf("Doctor Consultation\n");
+        printf("\n\n\n\n\nDoctor Consultation\n");
         printf("a.General Physician\nb.Cardiologist\nc.Orthopedic\nd.Neurologist\n");
         printf("Select the doctor you want to consult:");
         scanf(" %c",&doctors);
@@ -76,12 +76,12 @@ switch(choice)
           consultationFee = consultfee4;
           break;
         default :
-          printf("invalid input");
+          printf("invalid input\n");
           break;
         }
         break;
     case 4:
-        printf("a.Blood test\nb.urine test\nc.ECG\nd.X-Ray\n");
+        printf("\n\n\n\n\na.Blood test\nb.urine test\nc.ECG\nd.X-Ray\n");
         printf("Select the test you want to take:");
         scanf(" %c",&test);
         switch(test)
@@ -114,7 +114,7 @@ switch(choice)
     case 5:
         printf("Enter the pharmacy bill amount:");
         scanf("%d",&pharmbill);
-        printf("Total pharmacy bill is %d",pharmbill);
+        printf("Total pharmacy bill is %d\n\n\n\n",pharmbill);
         break;
     case 6:
         sub_Total = consultationFee+labtestfee+pharmbill;
