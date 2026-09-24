@@ -57,7 +57,7 @@ printf("6.View Medical Records\n");
 printf("7.Create Bill\n");
 printf("8.Print Bill\n");
 printf("9.Exit\n");
-printf("Enter the choice:");
+printf("Enter the choice: ");
 scanf("%d",&choice);
 switch(choice)
  {
@@ -354,9 +354,9 @@ void createbill(struct patient pat[],int *patientcount)
             }
             select=0;
             pat[i].bill.labtestfee = 0;
-            while(select!=6 || select!=5)
+            while(select!=6 && select!=5)
             {
-            printf("\nSelect the Lab Tests:\n");
+            printf("\nSelect the Lab Test: \n");
             printf("1. Blood Test : 50\n");
             printf("2. Urine Test : 100\n");
             printf("3. X-Ray      : 200\n");
@@ -407,6 +407,15 @@ void createbill(struct patient pat[],int *patientcount)
             printf("Enter Your choice: ");
             int another;
             scanf("%d",&another);
+            if(another==2)
+            {
+                select=6;
+            }
+            else if(another>2)
+            {
+                printf("Invalid Input");
+                select=6;
+            }
         }
 
             printf("\nEnter Pharmacy Bill:");
