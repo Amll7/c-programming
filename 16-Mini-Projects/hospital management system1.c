@@ -107,19 +107,19 @@ void patientregistration(struct patient pat[],int *patientcount)
         printf("     PATIENT REGISTRATION      \n");
         printf("===============================\n");
 
-        printf("Enter patient name:\n");
+        printf("Enter patient name: ");
         scanf("%s",pat[*patientcount].name);
 
-        printf("Enter User ID:");
+        printf("Enter User ID: ");
         scanf("%d",&pat[*patientcount].userid);
 
-        printf("Enter user age:\n");
+        printf("Enter user age: ");
         scanf("%d",&pat[*patientcount].age);
 
-        printf("Enter user phone number:\n");
+        printf("Enter user phone number: ");
         scanf("%lld",&pat[*patientcount].phonenumber);
 
-        printf("Enter User Gender:\n");
+        printf("Enter User Gender: ");
         scanf("%s", pat[*patientcount].gender);
 
         printf("Enter registration date: ");
@@ -135,7 +135,9 @@ void patientsearch(struct patient pat[], int *patientcount)
     int check;
     int i;
     int flag = 0;
-
+  printf("\n\n\n===============================\n");
+        printf("         PATIENT SEARCH          \n");
+        printf("===============================\n\n");
     printf("Enter the User ID of the patient: ");
     scanf("%d", &check);
 
@@ -143,29 +145,33 @@ void patientsearch(struct patient pat[], int *patientcount)
     {
         if(pat[i].userid == check)
         {
-            printf("\nPatient Found!\n");
+            printf("\nPatient Found!!\n");
 
-            printf("ID: %d\n", pat[i].userid);
-            printf("Name: %s\n", pat[i].name);
-            printf("Age: %d\n", pat[i].age);
-            printf("Phone: %lld\n", pat[i].phonenumber);
-            printf("Gender: %s\n", pat[i].gender);
-            printf("Registration Date: %s\n",
-                   pat[i].registrationDate);
+            printf("ID                 :   %d\n", pat[i].userid);
+            printf("Name               :   %s\n", pat[i].name);
+            printf("Age                :   %d\n", pat[i].age);
+            printf("Phone              :   %lld\n", pat[i].phonenumber);
+            printf("Gender             :   %s\n", pat[i].gender);
+            printf("Registration Date  :   %s\n",pat[i].registrationDate);
 
             flag = 1;
+             printf("_____________________________________________\n");
+             printf("Patient search successful\n\n\n\n");
             break;
         }
     }
 
     if(flag == 0)
     {
-        printf("Patient not found.\n");
+        printf("Patient not found.\n\n\n");
     }
 }
 void patientupdate(struct patient pat[],int *patientcount)
 {
 int check;
+ printf("\n\n\n===============================\n");
+        printf("        PATIENT UPDATION       \n");
+        printf("===============================\n");
 printf("Enter the User ID of the patient:");
 scanf("%d",&check);
 int i;
@@ -176,16 +182,16 @@ for(i=0;i<*patientcount;i++)
   {
      printf("\nPatient Found!\n");
 
-        printf("Enter patient name:\n");
+        printf("Enter patient name: ");
         scanf("%s",pat[i].name);
 
-        printf("Enter user age:\n");
+        printf("Enter user age: ");
         scanf("%d",&pat[i].age);
 
-        printf("Enter user phone number:\n");
+        printf("Enter user phone number: ");
         scanf("%lld",&pat[i].phonenumber);
 
-        printf("Enter User Gender:\n");
+        printf("Enter User Gender: ");
         scanf("%s", pat[i].gender);
 
 
@@ -197,7 +203,7 @@ for(i=0;i<*patientcount;i++)
 
     if(flag == 0)
     {
-        printf("\nPatient not found.\n");
+        printf("\nPatient not found.\n\n\n");
     }
   }
   void patientdelete(struct patient pat[],int *patientcount)
@@ -205,6 +211,9 @@ for(i=0;i<*patientcount;i++)
     int i,j;
     int flag=0;
     int check;
+    printf("\n\n\n===============================\n");
+        printf("        PATIENT DELETION       \n");
+        printf("===============================\n");
     printf("Enter the User ID of the patient:");
     scanf("%d",&check);
     for(i=0;i<*patientcount;i++)
@@ -217,6 +226,8 @@ for(i=0;i<*patientcount;i++)
       }
         flag=1;
        *patientcount--;
+        printf("_____________________________________________\n");
+        printf("Patient deletion successful.\n\n\n\n");
        break;
 
     }
@@ -234,19 +245,19 @@ void addmedicalrecords(struct patient pat[], int *patientcount)
     int check;
     int flag=0;
     printf("ADDING THE MEDICAL RECORDS...\n");
-    printf("Enter the User ID\n");
+    printf("Enter the User ID: ");
     scanf("%d",&check);
     for(int i=0;i<*patientcount;i++)
     {
         if(pat[i].recordcount>=20)
         {
-            printf("Maximum Record Count Reached");
+            printf("Maximum Record Count Reached!!");
             flag=1;
             break;
         }
         if(check==pat[i].userid)
         {
-        printf("Enter the Visit Date:");
+        printf("Enter the Visit Date: ");
         scanf("%s",pat[i].records[pat[i].recordcount].visitDate);
         printf("Enter the Diagnosis Details:");
         scanf("%s",pat[i].records[pat[i].recordcount].diagnosis);
@@ -258,50 +269,56 @@ void addmedicalrecords(struct patient pat[], int *patientcount)
     }
     if(flag==0)
     {
-        printf("No Patient Found...\n");
+        printf("No Patient Found...\n\n\n");
     }
 }
 void viewmedicalrecords(struct patient pat[],int *patientcount)
 {
     int check,i,flag=1,flag2=1;
     char visit[50];
-    printf("Enter the User ID of the patient\n");
+    printf("Enter the User ID of the patient: ");
     scanf("%d",&check);
     for(i=0;i< *patientcount;i++)
     {
         if(pat[i].userid==check)
         {
             flag2=0;
-            printf("Enter the visited date:\n");
+            printf("Enter the visited date: ");
             scanf("%s",visit);
             for(int j=0;j<pat[i].recordcount;j++)
             {
                 if (strcmp(visit,pat[i].records[j].visitDate)==0)
                 {
+                printf("\n\n\n===============================\n");
+                   printf("         MEDICAL RECORD        \n");
+                   printf("===============================\n\n");
                 printf("VISIT DATE:%s\n",pat[i].records[j].visitDate);
                 printf("DAIGNOSIS:%s\n",pat[i].records[j].diagnosis);
-                printf("PRESCRIPTION:%s\n",pat[i].records[j].prescription);
+                printf("PRESCRIPTION:%s\n\n\n\n",pat[i].records[j].prescription);
                 flag=0;
                 break;
                 }
             }
             if(flag==1)
             {
-                printf("RECORD NOT FOUND...\n");
+                printf("RECORD NOT FOUND...\n\n\n");
             }
         }
         break;
     }
     if(flag2)
     {
-        printf("USER NOT FOUND...\n");
+        printf("USER NOT FOUND...\n\n\n");
     }
 }
 void createbill(struct patient pat[],int *patientcount)
 {
     int check;
     int select;
-    printf("Enter the User ID of the patient");
+    printf("\n\n\n===============================\n");
+       printf("            BILLING            \n");
+       printf("===============================\n\n");
+    printf("Enter the User ID of the patient: ");
     scanf("%d",&check);
     for(int i=0;i<*patientcount;i++)
     {
@@ -311,6 +328,7 @@ void createbill(struct patient pat[],int *patientcount)
             printf("1.GENERAL CONSULATION : 500\n");
             printf("2.SPECIALISED CONSULATION : 1000\n");
             printf("3.EMERGENCY CONSULATION : 1200\n");
+            printf("Enter the choice: ");
             scanf("%d",&select);
             switch(select)
             {
@@ -334,41 +352,62 @@ void createbill(struct patient pat[],int *patientcount)
                 pat[i].bill.consultationfee=0;
 
             }
-            printf("\nSelect the Lab Test:\n");
+            select=0;
+            pat[i].bill.labtestfee = 0;
+            while(select!=6 || select!=5)
+            {
+            printf("\nSelect the Lab Tests:\n");
             printf("1. Blood Test : 50\n");
             printf("2. Urine Test : 100\n");
             printf("3. X-Ray      : 200\n");
             printf("4. MRI        : 500\n");
             printf("5. No Lab Test\n");
+            printf("6.Done\n");
+            printf("Enter the choices: ");
 
             scanf("%d", &select);
-
+    
             switch(select)
             {
                 case 1:
-                pat[i].bill.labtestfee = 50;
+                pat[i].bill.labtestfee = pat[i].bill.labtestfee+50;
+                printf("\nBlood Test Selected.\n");
                 break;
 
                 case 2:
-                pat[i].bill.labtestfee = 100;
+                pat[i].bill.labtestfee = pat[i].bill.labtestfee+100;
+                 printf("\nUrine Test Selected.\n");
                 break;
 
                 case 3:
-                pat[i].bill.labtestfee = 200;
+                pat[i].bill.labtestfee = pat[i].bill.labtestfee+200;
+                printf("\nX-Ray Selected.\n");
                 break;
 
                 case 4:
-                pat[i].bill.labtestfee = 500;
+                pat[i].bill.labtestfee = pat[i].bill.labtestfee+500;
+                 printf("\nMRi Scan Selected.\n");
                 break;
 
                 case 5:
                 pat[i].bill.labtestfee = 0;
+                printf("\nNo Test Selected.\n");
                 break;
+                case 6:
+                break;
+                
 
                 default:
                 printf("Invalid Input\n");
                 pat[i].bill.labtestfee = 0;
             }
+            printf("Do you want to Enter any other Tests?\n");
+            printf("1.Yes\n");
+            printf("2.No\n");
+            printf("Enter Your choice: ");
+            int another;
+            scanf("%d",&another);
+        }
 
             printf("\nEnter Pharmacy Bill:");
             scanf("%d",&pat[i].bill.pharmacybill);
