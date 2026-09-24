@@ -16,8 +16,8 @@ void func(char str[],char str1[])
 {
     int i,j;
     int n=strlen(str);
-    int arr[n];
-    arr[n]={0};
+    int arr[26]={0};
+    
     int k=0;
     for(i=0;str[i]!='\0';i++)
     {
@@ -40,15 +40,20 @@ void func(char str[],char str1[])
         }
         
     }
-    for(i=0;i<n;i++)
+    int count=0;
+    for(i=0;i<26;i++)
     {
-        if(arr[i]==0)
-        {
-            printf("not anagram");
-        }
-        
+       if(arr[i]!=0)
+       {
+       count++;
+       } 
     }
-    
-        
-        printf("anagram"); 
+    if(count==n)
+    {
+            printf("anagram");
+    }
+    else
+    {  
+    printf("anagram"); 
+    }
 }
