@@ -352,9 +352,9 @@ void createbill(struct patient pat[],int *patientcount)
                 pat[i].bill.consultationfee=0;
 
             }
-            select=0;
+            int another =1;
             pat[i].bill.labtestfee = 0;
-            while(select!=6 && select!=5)
+            while(another==1)
             {
             printf("\nSelect the Lab Test: \n");
             printf("1. Blood Test : 50\n");
@@ -392,29 +392,29 @@ void createbill(struct patient pat[],int *patientcount)
                 case 5:
                 pat[i].bill.labtestfee = 0;
                 printf("\nNo Test Selected.\n");
+                another=2;
                 break;
                 case 6:
+                another=2;
                 break;
                 
 
                 default:
                 printf("Invalid Input\n");
-                pat[i].bill.labtestfee = 0;
             }
-            printf("Do you want to Enter any other Tests?\n");
-            printf("1.Yes\n");
-            printf("2.No\n");
-            printf("Enter Your choice: ");
-            int another;
-            scanf("%d",&another);
-            if(another==2)
+            if(another!=2)
             {
-                select=6;
-            }
-            else if(another>2)
-            {
-                printf("Invalid Input");
-                select=6;
+                printf("\nDo you want to Enter any other Tests?\n");
+                printf("1.Yes\n");
+                printf("2.No\n");
+                printf("Enter Your choice: ");
+                scanf("%d",&another);
+            
+                    if(another!=2 && another !=1)
+                    {
+                        printf("Invalid Input");
+                        another=2;
+                    }
             }
         }
 
