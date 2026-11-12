@@ -1,0 +1,119 @@
+1. Which symbol is used to declare a pointer in C?
+A. &
+B. *
+C. #
+D. %
+
+2. Which function is used to read formatted input in C?
+A. printf()
+B. puts()
+C. scanf()
+D. gets()
+
+3. What is the index of the first element in an array?
+A. 0
+B. 1
+C. -1
+D. Depends on the array size
+
+4. Which loop executes its body at least once?
+A. for
+B. while
+C. Nested loop
+D. do-while
+
+5. Which header file is required for printf()?
+A. stdlib.h
+B. string.h
+C. stdio.h
+D. math.h
+
+6. What is the correct format specifier for an integer?
+A. %c
+B. %d
+C. %f
+D. %s
+
+7. Which operator is used to get the address of a variable?
+A. *
+B. %
+C. ->
+D. &
+
+8. Which character terminates a string in C?
+A. \n
+B. \t
+C. \0
+D. \b
+
+9. Which function returns the length of a string?
+A. strlen()
+B. strcpy()
+C. strcmp()
+D. strcat()
+
+10. What does fopen() return when a file cannot be opened?
+A. 0
+B. EOF
+C. NULL
+D. -1
+
+11. Which file mode opens a file for reading?
+A. w
+B. r
+C. a
+D. x
+
+12. Which operator gives the remainder after division?
+A. /
+B. *
+C. %
+D. //
+
+13. What is the output of printf("%d", 5 / 2)?
+A. 2.5
+B. 3
+C. 2
+D. 2.0
+
+14. Which keyword is used to return a value from a function?
+A. break
+B. return
+C. continue
+D. exit
+
+15. Which function compares two strings?
+A. strcpy()
+B. strcat()
+C. strlen()
+D. strcmp()
+
+16. What is the size of char in C?
+A. 1 byte
+B. 2 bytes
+C. 4 bytes
+D. 8 bytes
+
+17. Which operator represents logical AND?
+A. &
+B. ||
+C. &&
+D. !
+
+18. Which function closes a file?
+A. close()
+B. fclose()
+C. fileclose()
+D. endfile()
+
+19. What happens when break is executed inside a loop?
+A. Skips the current iteration
+B. Restarts the loop
+C. Exits the nearest enclosing loop
+D. Exits the entire program
+
+20. Which function writes formatted output to a file?
+A. fscanf()
+B. fgetc()
+C. fgets()
+D. fprintf()

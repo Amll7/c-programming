@@ -225,7 +225,7 @@ for(i=0;i<*patientcount;i++)
         pat[j]=pat[j+1];
       }
         flag=1;
-       *patientcount--;
+       (*patientcount)--;
         printf("_____________________________________________\n");
         printf("Patient deletion successful.\n\n\n\n");
        break;
@@ -282,7 +282,6 @@ void viewmedicalrecords(struct patient pat[],int *patientcount)
     {
         if(pat[i].userid==check)
         {
-            flag2=0;
             printf("Enter the visited date: ");
             scanf("%s",visit);
             for(int j=0;j<pat[i].recordcount;j++)
@@ -422,7 +421,7 @@ void createbill(struct patient pat[],int *patientcount)
             scanf("%d",&pat[i].bill.pharmacybill);
             
             pat[i].bill.subtotal=pat[i].bill.consultationfee+pat[i].bill.pharmacybill+pat[i].bill.labtestfee;
-            pat[i].bill.gst=(pat[i].bill.subtotal*18)/100;
+            pat[i].bill.gst=(pat[i].bill.subtotal*9)/100;
             pat[i].bill.total=pat[i].bill.subtotal+pat[i].bill.gst;
 
 
@@ -433,7 +432,7 @@ void createbill(struct patient pat[],int *patientcount)
 void generatebill(struct patient pat[],int *patientcount)
 {
     int check;
-    printf("Enter the User ID of the patient");
+    printf("Enter the User ID of the patient: ");
     scanf("%d",&check);
     for(int i=0;i<*patientcount;i++)
     {

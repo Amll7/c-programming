@@ -2,9 +2,6 @@
 
 void freq(int arr[], int size)
 {
-    
-    
-
    
     int i,j,count,skip;
     
