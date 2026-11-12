@@ -19,4 +19,4 @@ int main()
    }
    printf("\nThe size of marks variable is %lu",sizeof(mark[i]));
    return 0;
-}rurZyk-byswa0-xucwud
+}

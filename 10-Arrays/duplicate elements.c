@@ -2,15 +2,12 @@
 
 void duplicate(int arr[], int size)
 {
-    
-    
-
-   
     int i,j,skip;
     
     
     for(i=0;i<size;i++)
     {
+
      skip=0;
      for(j=0;j<i;j++)
      {
@@ -23,7 +20,7 @@ void duplicate(int arr[], int size)
 
       if(skip==1)
       continue;
-
+      
      for(j=i+1;j<size;j++)
       {
         if(arr[i]==arr[j])

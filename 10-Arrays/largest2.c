@@ -1,5 +1,5 @@
 #include<stdio.h>
-void largest(int arr,int size,int *larg);
+void largest(int arr[],int size,int *larg);
 int main()
 {
  int i,size;
